@@ -1,4 +1,4 @@
 .idea/*
 *.iml
 target
-creds.txt
+dependency-reduced-pom.xml

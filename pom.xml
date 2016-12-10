@@ -1,6 +1,30 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.mercyme</groupId>
-  <artifactId>overwatch-common</artifactId>
+  <groupId>com.nomercydojo</groupId>
+  <artifactId>overwatch-parent</artifactId>
   <version>0.1-SNAPSHOT</version>
+
+  <developers>
+    <developer>
+      <id>timd112</id>
+      <name>Timothy Driscoll</name>
+      <email>timothy.driscoll@gmail.com</email>
+      <roles>
+        <role>Software Lead</role>
+      </roles>
+      <timezone>America/Phoenix</timezone>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git@github.com:tdriscoll/mercyme.git</connection>
+    <developerConnection>scm:git:git@github.com:tdriscoll/mercyme.git</developerConnection>
+    <url>https://github.com/tdriscoll/mercyme</url>
+    <tag>MASTER</tag>
+  </scm>
+
+  <modules>
+    <module>overwatch-common</module>
+  </modules>
+
 </project>

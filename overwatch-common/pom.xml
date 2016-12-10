@@ -1,0 +1,20 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.nomercydojo</groupId>
+    <artifactId>overwatch-parent</artifactId>
+    <version>0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>overwatch-common</artifactId>
+  <packaging>bundle</packaging>
+  <name>Overwatch App Common Libs</name>
+  <description>Common libraries for Overwatch Application</description>
+  <url>https://github.com/datastax/java-driver</url>
+
+  <properties>
+    <main.basedir>${project.parent.basedir}</main.basedir>
+  </properties>
+
+</project>

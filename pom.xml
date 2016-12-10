@@ -1,0 +1,6 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mercyme</groupId>
+  <artifactId>overwatch-common</artifactId>
+  <version>0.1-SNAPSHOT</version>
+</project>

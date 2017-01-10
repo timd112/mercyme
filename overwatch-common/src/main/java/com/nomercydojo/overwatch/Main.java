@@ -17,6 +17,7 @@ public class Main {
       Document doc = Jsoup.connect(url).get();
       logger.info("Player Level: " + OverwatchParser.getPlayerLevel(doc));
       logger.info("Competitive Ranking: " + OverwatchParser.getCompetitiveRank(doc));
+      logger.info("Quick play total wins: "+ OverwatchParser.getQuickPlayGamesWon(doc));
     } catch (Exception e) {
       logger.error("Failed to fetch data", e);
     }

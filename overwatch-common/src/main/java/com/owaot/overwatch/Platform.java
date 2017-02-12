@@ -1,4 +1,4 @@
-package com.nomercydojo.overwatch;
+package com.owaot.overwatch;
 
 public enum Platform {
   PC("pc"),

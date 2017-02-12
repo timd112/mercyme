@@ -1,4 +1,4 @@
-package com.nomercydojo.overwatch;
+package com.owaot.overwatch;
 
 import com.google.common.base.Strings;
 import org.jsoup.Jsoup;

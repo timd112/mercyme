@@ -1,4 +1,4 @@
-package com.nomercydojo.overwatch;
+package com.owaot.overwatch;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

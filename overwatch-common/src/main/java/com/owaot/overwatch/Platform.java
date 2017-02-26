@@ -14,4 +14,17 @@ public enum Platform {
   public String getName(){
     return this.name;
   }
+
+  public static Platform getByName(String name){
+    switch(name.toLowerCase()){
+      case "pc":
+        return PC;
+      case "xb1":
+        return XBOX;
+      case "psn":
+        return PLAYSTATION;
+      default:
+        return PC;
+    }
+  }
 }

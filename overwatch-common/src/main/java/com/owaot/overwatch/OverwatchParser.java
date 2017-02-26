@@ -1,5 +1,6 @@
 package com.owaot.overwatch;
 
+import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.slf4j.Logger;
@@ -29,5 +30,20 @@ public class OverwatchParser {
     Element tableDiv = doc.select(GAMES_WON_JQUERY).get(6);
     Element gamesWon = tableDiv.select("table.data-table tr").get(1).child(1);
     return (gamesWon == null) ? 0 : Integer.parseInt(gamesWon.html());
+  }
+
+  public static User getQuickUserInfo(Platform platform, Region region, String gamerTag){
+    User user = new User(platform, region, gamerTag);
+    try {
+      String url = String.format(OverwatchParser.OW_URL_FMT, platform.getName(), region.getName(), gamerTag);
+      Document doc = Jsoup.connect(url).get()  ;
+      user.setLevel(getPlayerLevel(doc));
+      user.setSkillRating(getCompetitiveRank(doc));
+      user.setQuickPlayWins(getQuickPlayGamesWon(doc));
+    } catch (Exception e) {
+      logger.error("Failed to fetch data", e);
+    }
+
+    return user;
   }
 }

@@ -12,3 +12,21 @@ java -cp overwatch-common-0.1-SNAPSHOT.jar com.owaot.overwatch.Main liquidswords
 22:19:06.003 [main] INFO com.owaot.overwatch.Main - Competitive Ranking: 1494
 22:19:06.007 [main] INFO com.owaot.overwatch.Main - Quick play total wins: 113
 ```
+
+REST Interface
+--------------
+Currently supported path: */v1/users/{platform}/{region}/{gamerTag}*
+
+```$sh
+> curl http://localhost:8080/v1/users/pc/us/liquidswords-11931
+
+{
+    "gamerTag": "liquidswords-11931",
+    "region": "US",
+    "platform": "PC",
+    "level": 88,
+    "skillRating": 1458,
+    "quickPlayWins": 248
+}
+
+```

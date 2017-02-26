@@ -4,6 +4,8 @@ import com.owaot.overwatch.OverwatchParser;
 import com.owaot.overwatch.Platform;
 import com.owaot.overwatch.Region;
 import com.owaot.overwatch.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -13,6 +15,7 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/v1/users")
 public class UserResource {
+  private static Logger LOG = LoggerFactory.getLogger(UserResource.class);
 
   @GET
   @Produces(MediaType.APPLICATION_JSON)

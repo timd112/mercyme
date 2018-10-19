@@ -15,10 +15,10 @@ pipeline {
     }
 
     stages {
-        options{
-          gdStageOptions(type: 'test', testType: 'unit')
-        }
         stage('Test with Coverage') {
+          options{
+            gdStageOptions(type: 'test', testType: 'unit')
+          }
             steps {
                 withMaven(maven: 'maven3') {
                     sh "mvn -Penable-coverage clean test"

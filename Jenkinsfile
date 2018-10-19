@@ -21,7 +21,7 @@ pipeline {
           }
             steps {
                 withMaven(maven: 'maven3') {
-                    sh "mvn -Penable-coverage clean test"
+                    sh "mvn -Penable-jacoco clean test"
                 }
 
                 cobertura(

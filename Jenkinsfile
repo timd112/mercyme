@@ -24,7 +24,7 @@ pipeline {
                     sh "mvn -Penable-jacoco clean test"
                 }
 
-                jacoco()
+                jacoco(execPattern: '**/*.exec')
 //                cobertura(
 //                  autoUpdateHealth          : false,
 //                  autoUpdateStability       : false,

@@ -21,23 +21,22 @@ pipeline {
           }
             steps {
                 withMaven(maven: 'maven3') {
-                    sh "mvn -Penable-jacoco clean test"
+                    sh "mvn -Penable-cobertura clean test"
                 }
 
-                jacoco(execPattern: '**/*.exec')
-//                cobertura(
-//                  autoUpdateHealth          : false,
-//                  autoUpdateStability       : false,
-//                  coberturaReportFile       : '**/target/site/jacoco/jacoco.xml',
-//                  conditionalCoverageTargets: '70, 0, 0',
-//                  failUnhealthy             : false,
-//                  failUnstable              : false,
-//                  lineCoverageTargets       : '80, 0, 0',
-//                  maxNumberOfBuilds         : 0,
-//                  methodCoverageTargets     : '80, 0, 0',
-//                  onlyStable                : false,
-//                  sourceEncoding            : 'ASCII',
-//                  zoomCoverageChart         : false)
+                cobertura(
+                  autoUpdateHealth          : false,
+                  autoUpdateStability       : false,
+                  coberturaReportFile       : '**/target/site/jacoco/jacoco.xml',
+                  conditionalCoverageTargets: '70, 0, 0',
+                  failUnhealthy             : false,
+                  failUnstable              : false,
+                  lineCoverageTargets       : '80, 0, 0',
+                  maxNumberOfBuilds         : 0,
+                  methodCoverageTargets     : '80, 0, 0',
+                  onlyStable                : false,
+                  sourceEncoding            : 'ASCII',
+                  zoomCoverageChart         : false)
 
                 junit(testResults: '**/target/surefire-reports/*.xml')
             }

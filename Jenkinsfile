@@ -8,17 +8,20 @@ pipeline {
 
     options {
         gdJobOptions(team: 'timd112',
-                project: 'mercyme'
+                project: 'mercyme',
                 gitOrg: 'timd112',
+                environment: 'dev',
                 sendResults: false)
     }
 
     stages {
-
+        options{
+          gdStageOptions(type: 'test', testType: 'unit')
+        }
         stage('Test with Coverage') {
             steps {
                 withMaven(maven: 'maven3') {
-                    sh "mvn -Ptest-coverage clean test"
+                    sh "mvn -Penable-coverage clean test"
                 }
             }
         }

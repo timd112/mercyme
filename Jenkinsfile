@@ -27,7 +27,7 @@ pipeline {
                 cobertura(
                   autoUpdateHealth          : false,
                   autoUpdateStability       : false,
-                  coberturaReportFile       : '**/target/site/jacoco/jacoco.xml',
+                  coberturaReportFile       : '**/target/site/cobertura/coverage.xml',
                   conditionalCoverageTargets: '70, 0, 0',
                   failUnhealthy             : false,
                   failUnstable              : false,

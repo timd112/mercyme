@@ -11,7 +11,7 @@ pipeline {
                 project: 'mercyme',
                 gitOrg: 'timd112',
                 environment: 'dev',
-                sendResults: false)
+                sendResults: true)
     }
 
     stages {
@@ -38,7 +38,7 @@ pipeline {
                   sourceEncoding            : 'ASCII',
                   zoomCoverageChart         : false)
 
-                junit(testResults: '**/target/surefire-reports/*.xml')
+                //junit(testResults: '**/target/surefire-reports/*.xml')
             }
         }
 

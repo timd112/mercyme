@@ -8,9 +8,12 @@ pipeline {
 
     options {
         gdJobOptions(team: 'timd112',
-                project: 'mercyme',
+                project: 'overwatch-stats',
                 gitOrg: 'timd112',
                 environment: 'dev',
+                repoName: 'mercyme',
+                repoUrl: 'https://www.github.com/timd112/mercyme',
+                branch: env.GIT_BRANCH,
                 sendResults: true)
     }
 

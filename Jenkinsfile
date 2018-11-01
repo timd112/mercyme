@@ -13,7 +13,7 @@ pipeline {
                 environment: 'dev',
                 repoName: 'mercyme',
                 repoUrl: 'https://www.github.com/timd112/mercyme',
-                branch: env.GIT_BRANCH,
+                branch: 'master',
                 sendResults: true)
     }
 
